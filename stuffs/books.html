@@ -1,0 +1,32 @@
+<script src="js/addBooks.js"></script>
+
+<article>
+    <div id="content2">
+            <form action="addBook" method="post">
+                <b>Title</b><br>
+                <input name="title" type="text" required="text" pattern="[a-zA-Z]+">
+                <br>
+                <b>Author</b><br>
+                <input name="author" type="text" required="text" pattern="[a-zA-Z]+">
+                <br>
+                <b>Type</b><br>
+                <select name="type">
+                    <option value="Crime">Crime</option>
+                    <option value="Adventure">Adventure</option>
+                    <option value="Horror">Horror</option>
+                    <option value="Philosophical">Philosophical</option>
+                    <option value="Supernatural">Supernatural</option>
+                </select>
+                <br>
+                <b>Release Year</b><br>
+                <input name="year" type="number" required="number" min="0">
+                <br>
+                <input type="submit" class="add_and_list_button" value="Add Book">
+                <input type="button" class="add_and_list_button" onclick="loadBooks()" value="List Books">
+        <br>
+            <table style="float: left">
+                <td id="booktable"></td>
+            </table>
+        </form>
+    </div>
+</article>
