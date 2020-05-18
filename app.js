@@ -3,15 +3,15 @@ var bodyParser = require("body-parser");
 var cookieParser = require('cookie-parser');
 var app= express();
 
-app.get('/index.html', function (req, res) {
-    res.sendFile(__dirname + "/stuffs/" + "index.html");
-});
-
 var server= app.listen(8081, function(){
 
     var host = server.address().host;
     var port = server.address().port;
-    console.log("App listening at http://%d%d", host, port);
+    console.log("App listening at http://%s%s", host, port);
+});
+
+app.get('/', function (req, res) {
+    res.sendFile( __dirname + "/stuffs/" + "login.html" );
 });
 
 app.use(express.static(__dirname + '/stuffs'));
